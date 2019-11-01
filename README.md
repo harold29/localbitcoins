@@ -1,5 +1,4 @@
 # Localbitcoins 
-======
 
 [![Build Status](https://travis-ci.org/harold29/localbitcoins.svg?branch=master)](https://travis-ci.org/harold29/localbitcoins)
 [![Maintainability](https://api.codeclimate.com/v1/badges/058203782520c0640df8/maintainability)](https://codeclimate.com/github/harold29/localbitcoins/maintainability)
