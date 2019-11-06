@@ -15,7 +15,5 @@ module Localbitcoins
 
     include Connection
     include Request
-    
-
   end
 end

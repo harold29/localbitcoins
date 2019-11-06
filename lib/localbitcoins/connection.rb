@@ -5,7 +5,6 @@ require 'byebug'
 
 module Localbitcoins
   module Connection
-
     private
 
     def connection(options = {})
