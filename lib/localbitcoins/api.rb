@@ -1,6 +1,6 @@
-require './localbitcoins/connection'
-require './localbitcoins/configuration'
-require './localbitcoins/request'
+require './lib/localbitcoins/connection'
+require './lib/localbitcoins/configuration'
+require './lib/localbitcoins/request'
 
 module Localbitcoins
   class API

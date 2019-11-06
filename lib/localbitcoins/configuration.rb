@@ -1,5 +1,5 @@
 require 'faraday'
-require './localbitcoins/version.rb'
+require './lib/localbitcoins/version.rb'
 
 module Localbitcoins
   module Configuration
