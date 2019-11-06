@@ -1,3 +1,5 @@
+require 'byebug'
+
 module Localbitcoins
   module Request
 
@@ -12,7 +14,7 @@ module Localbitcoins
     private
 
     def request(method, path, options)
-      response = connection.send(method) do |requeest|
+      response = connection.send(method) do |request|
         case method
         when :get
           request.url(path, options)

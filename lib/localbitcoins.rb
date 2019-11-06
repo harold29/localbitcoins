@@ -1,31 +1,12 @@
-require "localbitcoins/version"
+require_relative "localbitcoins/api"
+require_relative "localbitcoins/client"
+require_relative "localbitcoins/configuration"
+require_relative "localbitcoins/version"
 
 module Localbitcoins
-  
-  @app_info = nil
+  extend Configuration
 
-  @api_base = 'https://localbitcoins.com'
-
-  class << self
-    attr_accessor :apiauth_key
-    attr_accessor :apiauth_nonce
-    attr_accessor :apiauth_signature
-
-    attr_reader :api_base
-
-    def self.app_info
-      @app_info
-    end
-
-    def self.app_info=(info)
-      @app_info = info
-    end
-
-    def self.api_base=(api_base)
-      @api_base = api_base
-    end
+  def self.client(options = {})
+    Localbitcoins::Client.new(options)
   end
-
-  class Error < StandardError; end
-  # Your code goes here...
 end

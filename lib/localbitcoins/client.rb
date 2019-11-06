@@ -1,11 +1,4 @@
-require 'localbitcoins/connection'
-
 module Localbitcoins
-  class Client
-    include Localbitcoins::Connection
-
-    def initialize(options = {})
-      
-    end
+  class Client < API
   end
 end 
