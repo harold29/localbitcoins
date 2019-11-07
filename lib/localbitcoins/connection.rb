@@ -8,14 +8,11 @@ module Localbitcoins
     private
 
     def connection(options = {})
-      apiauth_nonce = nonce
       options = {
         headers: {
           'Accept' => "application/json; charset=utf-8",
           'User-Agent' => user_agent,
-          'Apiauth-Key' => hmac_key,
-          'Apiauth-Nonce' => apiauth_nonce,
-          'Apiauth-Signature' => signature(endpoint, apiauth_nonce)
+          'Apiauth-Key' => hmac_key
         },
         url: base_uri,
         proxy: proxy
@@ -28,17 +25,6 @@ module Localbitcoins
         # connection.use
         connection.adapter(adapter)
       end
-    end
-
-    def nonce
-      Time.now.to_i.to_s
-    end
-
-    def signature(endpoint, apiauth_nonce)
-      url = URI(base_uri + endpoint) 
-      message = apiauth_nonce.to_s + hmac_key + url.path + url.query.to_s
-
-      OpenSSL::HMAC.hexdigest('SHA256', hmac_secret.encode('utf-8'), message.encode('utf-8')).upcase
     end
   end
 end
