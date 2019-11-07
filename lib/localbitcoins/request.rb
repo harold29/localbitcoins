@@ -15,7 +15,7 @@ module Localbitcoins
 
     def nonce
       Time.now.to_i.to_s
-    end 
+    end
 
     def signature(endpoint, apiauth_nonce)
       url = URI(base_uri + endpoint)
