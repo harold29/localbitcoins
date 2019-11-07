@@ -1,6 +1,7 @@
 require './lib/localbitcoins/connection'
 require './lib/localbitcoins/configuration'
 require './lib/localbitcoins/request'
+require './lib/localbitcoins/endpoint'
 
 module Localbitcoins
   class API
@@ -15,5 +16,6 @@ module Localbitcoins
 
     include Connection
     include Request
+    include Endpoint
   end
 end

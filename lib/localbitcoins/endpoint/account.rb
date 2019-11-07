@@ -1,4 +1,4 @@
-module Localbitcooins
+module Localbitcoins
   module Endpoint
     module Account
       def myself(options={})
