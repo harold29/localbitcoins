@@ -38,7 +38,7 @@ module Localbitcoins
           final_endpoint = path
           request.url(path, options)
         when :post
-          final_endpoint = path + ( options.empty? ? "" : "?#{ URI.encode_www_form(options) }")
+          final_endpoint = path + (options.empty? ? '' : "?#{URI.encode_www_form(options)}")
           request.path = final_endpoint
           request.body = options unless options.empty?
         end
