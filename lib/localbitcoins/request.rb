@@ -32,14 +32,17 @@ module Localbitcoins
 
     def request(method, path, options)
       response = connection.send(method) do |request|
-        sign_request(path, request)
+        final_endpoint = ''
         case method
         when :get
+          final_endpoint = path
           request.url(path, options)
         when :post
-          request.path = path
+          final_endpoint = path + ( options.empty? ? "" : "?#{ URI.encode_www_form(options) }")
+          request.path = final_endpoint
           request.body = options unless options.empty?
         end
+        sign_request(final_endpoint, request)
       end
       return response.body
     end

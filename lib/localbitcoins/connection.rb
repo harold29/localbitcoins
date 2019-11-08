@@ -21,6 +21,7 @@ module Localbitcoins
       Faraday::Connection.new(options) do |connection|
         # connection.use Faraday::Request::Multipart
         connection.use Faraday::Request::UrlEncoded
+        connection.request :url_encoded
         # connection.use Faraday::Response::ParseJson
         # connection.use
         connection.adapter(adapter)
