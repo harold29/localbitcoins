@@ -15,4 +15,8 @@ tags
 # rspec failure tracking
 .rspec_status
 
+/fixtures
+
+.byebug_history
+
 *.swp
