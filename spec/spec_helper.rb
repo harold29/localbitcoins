@@ -1,15 +1,25 @@
 require 'simplecov'
 SimpleCov.start
 
+require 'webmock/rspec'
 require 'vcr'
 
 require "bundler/setup"
 require "localbitcoins"
 
+require_relative "./helpers.rb"
+
+include Helpers 
+
+WebMock.disable_net_connect!(allow_localhost: true)
+
 VCR.configure do |config|
-  config.cassette_library_dir = 'fixtures/vcr_cassettes'
-  config.hook_into :faraday
+  config.cassette_library_dir = 'spec/vcr'
+  config.hook_into :webmock
+  config.allow_http_connections_when_no_cassette = true
+  config.default_cassette_options = { :record => :new_episodes }
   config.configure_rspec_metadata!
+  config.filter_sensitive_data("<HMAC>") { valid_hmac }
 end
 
 RSpec.configure do |config|

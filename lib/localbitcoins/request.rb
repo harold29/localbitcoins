@@ -44,7 +44,7 @@ module Localbitcoins
         end
         sign_request(final_endpoint, request)
       end
-      return response.body
+      return response
     end
   end
 end
