@@ -16,6 +16,7 @@ tags
 .rspec_status
 
 /fixtures
+#/spec/vcr/*.yml
 
 .byebug_history
 
