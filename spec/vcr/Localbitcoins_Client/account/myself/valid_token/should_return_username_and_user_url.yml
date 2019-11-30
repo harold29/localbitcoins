@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://localbitcoins.com/api/myself/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Localbitcoins Ruby Gem 0.1.0
+      Apiauth-Key:
+      - 812d25c29f1a94bc1b8cf2d08f51e5af
+      Apiauth-Nonce:
+      - '1574909442'
+      Apiauth-Signature:
+      - 5976F87C2DE838CFE825234D126AFD0FDF92DA7170142920CC720FBB0DCCE6F7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 28 Nov 2019 02:50:43 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dee82f8588d788312aef51ef0d2def0101574909442; expires=Sat, 28-Dec-19
+        02:50:42 GMT; path=/; domain=.localbitcoins.com; HttpOnly; Secure
+      - django_language=en; Path=/
+      - lbc_browser_id=DGJFJSDASHXTWSBGJXKEFEVGQMACBONL; expires=Tue, 26-May-2020
+        02:50:43 GMT; httponly; Max-Age=15552000; Path=/; secure
+      - localbitcoinssession=None; expires=Fri, 29-Nov-2019 02:50:43 GMT; httponly;
+        Max-Age=86400; Path=/; secure
+      X-Content-Type-Options:
+      - nosniff
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - DENY
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 53c909329896d2d0-EZE
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data": {"username": "test-user", "feedback_score": "N/A", "feedback_count":
+        0, "real_name_verifications_trusted": 0, "trading_partners_count": 0, "url":
+        "https://localbitcoins.com/p/test-user/", "real_name_verifications_untrusted":
+        0, "has_feedback": false, "identity_verified_at": "2019-10-24T01:00:49+00:00",
+        "trusted_count": 0, "feedbacks_unconfirmed_count": 0, "blocked_count": 0,
+        "trade_volume_text": "0-0.5 BTC", "has_common_trades": false, "real_name_verifications_rejected":
+        0, "age_text": "1\u00a0year, 7\u00a0months", "confirmed_trade_count_text":
+        "0", "created_at": "2018-04-02T17:26:17+00:00"}}'
+    http_version: 
+  recorded_at: Thu, 28 Nov 2019 02:50:43 GMT
+recorded_with: VCR 5.0.0
