@@ -14,9 +14,9 @@ http_interactions:
       Apiauth-Key:
       - 812d25c29f1a94bc1b8cf2d08f51e5af
       Apiauth-Nonce:
-      - '1574908382'
+      - '1574909442'
       Apiauth-Signature:
-      - E14BA61A5E2E12EB09E79EE7B2BD79D772F4E4FB0C2E19C526919F0C01DFBF87
+      - 5976F87C2DE838CFE825234D126AFD0FDF92DA7170142920CC720FBB0DCCE6F7
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 28 Nov 2019 02:33:03 GMT
+      - Thu, 28 Nov 2019 02:50:43 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -33,12 +33,12 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d905b4af73b0f199b6ba9114c394f168f1574908383; expires=Sat, 28-Dec-19
-        02:33:03 GMT; path=/; domain=.localbitcoins.com; HttpOnly; Secure
+      - __cfduid=dee82f8588d788312aef51ef0d2def0101574909442; expires=Sat, 28-Dec-19
+        02:50:42 GMT; path=/; domain=.localbitcoins.com; HttpOnly; Secure
       - django_language=en; Path=/
-      - lbc_browser_id=EXMJSXXQVYHCMSPJKVOLOEYXYWIOZTAO; expires=Tue, 26-May-2020
-        02:33:03 GMT; httponly; Max-Age=15552000; Path=/; secure
-      - localbitcoinssession=None; expires=Fri, 29-Nov-2019 02:33:03 GMT; httponly;
+      - lbc_browser_id=DGJFJSDASHXTWSBGJXKEFEVGQMACBONL; expires=Tue, 26-May-2020
+        02:50:43 GMT; httponly; Max-Age=15552000; Path=/; secure
+      - localbitcoinssession=None; expires=Fri, 29-Nov-2019 02:50:43 GMT; httponly;
         Max-Age=86400; Path=/; secure
       X-Content-Type-Options:
       - nosniff
@@ -57,7 +57,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 53c8ef51ec23678f-EZE
+      - 53c909329896d2d0-EZE
     body:
       encoding: ASCII-8BIT
       string: '{"data": {"username": "test-user", "feedback_score": "N/A", "feedback_count":
@@ -69,5 +69,5 @@ http_interactions:
         0, "age_text": "1\u00a0year, 7\u00a0months", "confirmed_trade_count_text":
         "0", "created_at": "2018-04-02T17:26:17+00:00"}}'
     http_version: 
-  recorded_at: Thu, 28 Nov 2019 02:33:03 GMT
+  recorded_at: Thu, 28 Nov 2019 02:50:43 GMT
 recorded_with: VCR 5.0.0

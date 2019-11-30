@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://localbitcoins.com/api/myself/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Localbitcoins Ruby Gem 0.1.0
+      Apiauth-Key:
+      - hmac-invalid-key
+      Apiauth-Nonce:
+      - '1574993108'
+      Apiauth-Signature:
+      - 3754FA14E412D20308A810EF6AC01BD677BC00D2FBA941C932C7C7C55C569107
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Date:
+      - Fri, 29 Nov 2019 02:05:08 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dc48bf3749c05040e475815c79a8a88a61574993108; expires=Sun, 29-Dec-19
+        02:05:08 GMT; path=/; domain=.localbitcoins.com; HttpOnly; Secure
+      - django_language=en; Path=/
+      - lbc_browser_id=FOEOUDPBWLUEKSNIAEEXCUOHBMYACUAO; expires=Wed, 27-May-2020
+        02:05:08 GMT; httponly; Max-Age=15552000; Path=/; secure
+      - localbitcoinssession=None; expires=Sat, 30-Nov-2019 02:05:08 GMT; httponly;
+        Max-Age=86400; Path=/; secure
+      X-Content-Type-Options:
+      - nosniff
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - DENY
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 53d103cd6aecd7d1-EZE
+    body:
+      encoding: UTF-8
+      string: '{"error": {"message": "HMAC authentication key and signature was given,
+        but they are invalid.", "error_code": 41}}'
+    http_version: 
+  recorded_at: Fri, 29 Nov 2019 02:05:08 GMT
+recorded_with: VCR 5.0.0
