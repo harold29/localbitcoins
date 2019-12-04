@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://localbitcoins.com/api/dashboard/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Localbitcoins Ruby Gem 0.1.0
+      Apiauth-Key:
+      - 812d25c29f1a94bc1b8cf2d08f51e5af
+      Apiauth-Nonce:
+      - '1575427774'
+      Apiauth-Signature:
+      - 5A9A14E8955DD45FA3DC3A81DD41C8FD9F962552DEF9FE505F74C26B63917CFA
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 04 Dec 2019 02:49:42 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d9174b73f8db10705e16b40be81c211691575427774; expires=Fri, 03-Jan-20
+        02:49:34 GMT; path=/; domain=.localbitcoins.com; HttpOnly; Secure
+      - django_language=en; Path=/
+      - lbc_browser_id=TZNXVKNNSAJTEGAFEIILUPNMMEVIVFZX; expires=Mon, 01-Jun-2020
+        02:49:42 GMT; httponly; Max-Age=15552000; Path=/; secure
+      - localbitcoinssession=None; expires=Thu, 05-Dec-2019 02:49:42 GMT; httponly;
+        Max-Age=86400; Path=/; secure
+      X-Content-Type-Options:
+      - nosniff
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - DENY
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 53fa77c4be2767c5-EZE
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data": {"contact_list": [], "contact_count": 0}}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2019 02:49:42 GMT
+recorded_with: VCR 5.0.0
