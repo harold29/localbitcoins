@@ -1,5 +1,7 @@
 require_relative './spec_helper'
 
+#TODO: This file should be refactored with shared_examples.
+
 RSpec.describe Localbitcoins::Client, :vcr do
   describe :initialize do
     let(:subject) { Localbitcoins::Client }
@@ -45,30 +47,83 @@ RSpec.describe Localbitcoins::Client, :vcr do
     end
 
     describe '#dashboard' do
-      it 'is' do
-        pending('waiting to be implemented')
-        expect(1).to be(1)
+      context 'valid token' do
+        let(:response) { valid_client.dashboard }
+        let(:body) { JSON.parse(response.body, symbolize_names: true)[:data] }
+
+        it 'should return valid response' do
+          expect(response.status).to eq(200)
+        end
+        
+        it 'should return contact list' do
+          expect(body[:contact_list]).to eq([])
+        end
+
+        it 'should return the contact count' do
+          expect(body[:contact_count]).to eq(0)
+        end
       end
     end
 
     describe '#dashboard_released' do
-      it 'is' do
-        pending('waiting to be implemented')
-        expect(1).to be(1)
+      context 'valid token' do
+        let(:response) { valid_client.dashboard }
+        let(:body) { JSON.parse(response.body, symbolize_names: true)[:data] }
+        
+        it 'should return valid response' do
+          expect(response.status).to eq(200)
+        end
+
+        it 'should return contact list' do
+          expect(body[:contact_list]).to eq([])
+        end
+
+        it 'should return the contact count' do
+          expect(body[:contact_count]).to eq(0)
+        end
       end
     end
 
     describe '#dashboard_closed' do
-      it 'is' do
-        pending('waiting to be implemented')
-        expect(1).to be(1)
+      context 'valid token' do
+        let(:response) { valid_client.dashboard }
+        let(:body) { JSON.parse(response.body, symbolize_names: true)[:data] }
+        
+        it 'should return valid response' do
+          expect(response.status).to eq(200)
+        end
+
+        it 'should return contact list' do
+          expect(body[:contact_list]).to eq([])
+        end
+
+        it 'should return the contact count' do
+          expect(body[:contact_count]).to eq(0)
+        end
       end
     end
 
     describe '#notifications' do
-      it 'is' do
-        pending('waiting to be implemented')
-        expect(1).to be(1)
+      context 'valid token' do
+        let(:response) { valid_client.notifications }
+        let(:body) { JSON.parse(response.body, symbolize_names: true)[:data] }
+
+        it 'should return valid response' do
+          expect(response.status).to eq(200)
+          expect(body.size).to eq(5)
+        end
+
+        it 'should return messages with url' do
+          expect(body.all?{ |elem| !elem[:url].nil? }).to eq(true)
+        end
+
+        it 'should return messages with date' do
+          expect(body.all?{ |elem| !elem[:created_at].nil? }).to eq(true)
+        end
+
+        it 'should return messages with id' do
+          expect(body.all?{ |elem| !elem[:id].nil? }).to eq(true)
+        end
       end
     end
   end
