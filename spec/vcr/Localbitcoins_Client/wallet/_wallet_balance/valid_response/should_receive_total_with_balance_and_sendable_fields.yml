@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://localbitcoins.com/api/wallet-balance/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Localbitcoins Ruby Gem 0.1.0
+      Apiauth-Key:
+      - 812d25c29f1a94bc1b8cf2d08f51e5af
+      Apiauth-Nonce:
+      - '1576632633'
+      Apiauth-Signature:
+      - 7C23FD7910AB4E5336566CA0176E85C1D81F5413647E017CDFA7A8751382F6F0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 18 Dec 2019 01:30:33 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d36ea06f440be28ba56283bed37eb92e21576632633; expires=Fri, 17-Jan-20
+        01:30:33 GMT; path=/; domain=.localbitcoins.com; HttpOnly; SameSite=Lax; Secure
+      - django_language=en; Path=/
+      - lbc_browser_id=ZPEHWWMLNXFMFZRQYPTHAMYMLCVZCQSG; expires=Mon, 15-Jun-2020
+        01:30:33 GMT; httponly; Max-Age=15552000; Path=/; secure
+      - localbitcoinssession=None; expires=Thu, 19-Dec-2019 01:30:33 GMT; httponly;
+        Max-Age=86400; Path=/; secure
+      X-Content-Type-Options:
+      - nosniff
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - DENY
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 546d5f470f84d86d-EZE
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data": {"receiving_address_list": [{"received": "0.00000000", "address":
+        "randomStringTest"}], "message": "OK", "total": {"balance":
+        "0.00000000", "sendable": "0"}, "receiving_address_count": 1, "receiving_address":
+        "randomStringTest"}}'
+    http_version: 
+  recorded_at: Wed, 18 Dec 2019 01:30:33 GMT
+recorded_with: VCR 5.0.0

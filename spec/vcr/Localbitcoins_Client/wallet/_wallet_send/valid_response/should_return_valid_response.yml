@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://localbitcoins.com/api/wallet-send/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Localbitcoins Ruby Gem 0.1.0
+      Apiauth-Key:
+      - 812d25c29f1a94bc1b8cf2d08f51e5af
+      Apiauth-Nonce:
+      - '1576632637'
+      Apiauth-Signature:
+      - F7CEF8E0C624F36ED6CB01988F9FBBC324D188EF841256EB819C0618EFA489BB
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Date:
+      - Wed, 18 Dec 2019 01:30:40 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=df9f9aaf51b3d737fb8aff289490356fd1576632637; expires=Fri, 17-Jan-20
+        01:30:37 GMT; path=/; domain=.localbitcoins.com; HttpOnly; SameSite=Lax; Secure
+      - django_language=en; Path=/
+      - lbc_browser_id=NKENMHXUAYGXFHQQGTDIQFAICKVKEYKV; expires=Mon, 15-Jun-2020
+        01:30:40 GMT; httponly; Max-Age=15552000; Path=/; secure
+      - localbitcoinssession=kret38z5744soa1kr98lbsk0ao6axgdk; expires=Thu, 19-Dec-2019
+        01:30:40 GMT; httponly; Max-Age=86400; Path=/; secure
+      X-Content-Type-Options:
+      - nosniff
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - DENY
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 546d5f5e5bfff80e-EZE
+    body:
+      encoding: UTF-8
+      string: '{"error": {"message": "Invalid parameters.", "errors": {"amount": "*
+        This field is required.", "address": "* This field is required."}, "error_code":
+        9, "error_lists": {"amount": ["This field is required."], "address": ["This
+        field is required."]}}}'
+    http_version: 
+  recorded_at: Wed, 18 Dec 2019 01:30:40 GMT
+recorded_with: VCR 5.0.0

@@ -1,0 +1,336 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://localbitcoins.com/api/fees/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Localbitcoins Ruby Gem 0.1.0
+      Apiauth-Key:
+      - 812d25c29f1a94bc1b8cf2d08f51e5af
+      Apiauth-Nonce:
+      - '1576632634'
+      Apiauth-Signature:
+      - 1408BEF704E10ADF1BCD5F9B8A0F1C87E9C82D53D2CCE761D8989835941A2451
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 18 Dec 2019 01:30:37 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d940486ca1d12d6639625096c92ee58d31576632634; expires=Fri, 17-Jan-20
+        01:30:34 GMT; path=/; domain=.localbitcoins.com; HttpOnly; SameSite=Lax; Secure
+      - django_language=en; Path=/
+      - lbc_browser_id=CYVXJAFJVGWCKNHBWSWFUBOPOQNIGEMU; expires=Mon, 15-Jun-2020
+        01:30:37 GMT; httponly; Max-Age=15552000; Path=/; secure
+      - localbitcoinssession=None; expires=Thu, 19-Dec-2019 01:30:37 GMT; httponly;
+        Max-Age=86400; Path=/; secure
+      X-Content-Type-Options:
+      - nosniff
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - DENY
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 546d5f4bcd9fd2c8-EZE
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data": {"deposit_fee": "0.00003000", "outgoing_fee": "0.00001000"}}'
+    http_version: 
+  recorded_at: Wed, 18 Dec 2019 01:30:37 GMT
+- request:
+    method: post
+    uri: https://localbitcoins.com/api/wallet-send/
+    body:
+      encoding: UTF-8
+      string: address=3C4bLedQKBdyw5q9JbfEGSkaHhgYiSTPmx&amount=0
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Localbitcoins Ruby Gem 0.1.0
+      Apiauth-Key:
+      - 812d25c29f1a94bc1b8cf2d08f51e5af
+      Apiauth-Nonce:
+      - '1576635683'
+      Apiauth-Signature:
+      - 26AAEE0C5CE4298E953EE5DB67CF6EF5B72AD7F8C0B5790EF259BF96ED11600D
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Date:
+      - Wed, 18 Dec 2019 02:21:23 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d73ae17816cfd1967a43ad20c7500dd7e1576635683; expires=Fri, 17-Jan-20
+        02:21:23 GMT; path=/; domain=.localbitcoins.com; HttpOnly; SameSite=Lax; Secure
+      - django_language=en; Path=/
+      - lbc_browser_id=ZRPXTIIYHURLZHBEVWKJZTQJPYRORZOK; expires=Mon, 15-Jun-2020
+        02:21:23 GMT; httponly; Max-Age=15552000; Path=/; secure
+      - localbitcoinssession=jn1uos82k0me86s2xf5imqbiv19sads1; expires=Thu, 19-Dec-2019
+        02:21:23 GMT; httponly; Max-Age=86400; Path=/; secure
+      X-Content-Type-Options:
+      - nosniff
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - DENY
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 546da9bb198cf7c2-EZE
+    body:
+      encoding: UTF-8
+      string: '{"error": {"message": "Invalid parameters.", "errors": {"amount": "*
+        Ensure this value is greater than or equal to 0.0001."}, "error_code": 9,
+        "error_lists": {"amount": ["Ensure this value is greater than or equal to
+        0.0001."]}}}'
+    http_version: 
+  recorded_at: Wed, 18 Dec 2019 02:21:23 GMT
+- request:
+    method: post
+    uri: https://localbitcoins.com/api/wallet-send/
+    body:
+      encoding: UTF-8
+      string: address=3C4bLedQKBdyw5q9JbfEGSkaHhgYiSTPmx&amount=0
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Localbitcoins Ruby Gem 0.1.0
+      Apiauth-Key:
+      - 812d25c29f1a94bc1b8cf2d08f51e5af
+      Apiauth-Nonce:
+      - '1576635693'
+      Apiauth-Signature:
+      - E1E131A5711EDBDF1E2C61EBFF88ED15725FAE0DFA144DA4E731B2CA0BA1869A
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Date:
+      - Wed, 18 Dec 2019 02:21:33 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d3463e0b9f40e02f91fae6b6bef2ef2ca1576635693; expires=Fri, 17-Jan-20
+        02:21:33 GMT; path=/; domain=.localbitcoins.com; HttpOnly; SameSite=Lax; Secure
+      - django_language=en; Path=/
+      - lbc_browser_id=FJUVXMDWLVPRTUPYDMVVLRAJLEGLRJFJ; expires=Mon, 15-Jun-2020
+        02:21:33 GMT; httponly; Max-Age=15552000; Path=/; secure
+      - localbitcoinssession=psx8ic4o8k3vt5y4bjl8f1lo624l1nbr; expires=Thu, 19-Dec-2019
+        02:21:33 GMT; httponly; Max-Age=86400; Path=/; secure
+      X-Content-Type-Options:
+      - nosniff
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - DENY
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 546da9fbaf6dd2cc-EZE
+    body:
+      encoding: UTF-8
+      string: '{"error": {"message": "Invalid parameters.", "errors": {"amount": "*
+        Ensure this value is greater than or equal to 0.0001."}, "error_code": 9,
+        "error_lists": {"amount": ["Ensure this value is greater than or equal to
+        0.0001."]}}}'
+    http_version: 
+  recorded_at: Wed, 18 Dec 2019 02:21:33 GMT
+- request:
+    method: post
+    uri: https://localbitcoins.com/api/wallet-send/
+    body:
+      encoding: UTF-8
+      string: address=3C4bLedQKBdyw5q9JbfEGSkaHhgYiSTPmx&amount=0.002
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Localbitcoins Ruby Gem 0.1.0
+      Apiauth-Key:
+      - 812d25c29f1a94bc1b8cf2d08f51e5af
+      Apiauth-Nonce:
+      - '1576635748'
+      Apiauth-Signature:
+      - DD49C8713B2396812E6C3E86A226F3EBC41C1C3727F351259DD5738CC800AF69
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Date:
+      - Wed, 18 Dec 2019 02:22:28 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=db161ca27a55862598285c5055e84e58a1576635748; expires=Fri, 17-Jan-20
+        02:22:28 GMT; path=/; domain=.localbitcoins.com; HttpOnly; SameSite=Lax; Secure
+      - django_language=en; Path=/
+      - lbc_browser_id=CQNUXUXRTYRCCRKWEXOGAHDHJCMBZNJQ; expires=Mon, 15-Jun-2020
+        02:22:28 GMT; httponly; Max-Age=15552000; Path=/; secure
+      - localbitcoinssession=20zwas3jzgx9ra1mktwc2ap38an3tocj; expires=Thu, 19-Dec-2019
+        02:22:28 GMT; httponly; Max-Age=86400; Path=/; secure
+      X-Content-Type-Options:
+      - nosniff
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - DENY
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 546dab53f836d855-EZE
+    body:
+      encoding: UTF-8
+      string: '{"error": {"message": "One or more parameters did not validate. Please
+        check the API documentation for usage.", "errors": {"amount": "Cannot send
+        to yourself"}, "error_code": 18}}'
+    http_version: 
+  recorded_at: Wed, 18 Dec 2019 02:22:28 GMT
+- request:
+    method: post
+    uri: https://localbitcoins.com/api/wallet-send/
+    body:
+      encoding: UTF-8
+      string: address=3C4bLedQKBdyw5q9JbfEGSkaHhgYiSmx&amount=0.002
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Localbitcoins Ruby Gem 0.1.0
+      Apiauth-Key:
+      - 812d25c29f1a94bc1b8cf2d08f51e5af
+      Apiauth-Nonce:
+      - '1576635771'
+      Apiauth-Signature:
+      - 0634DBF75F4DD8EA15743B395B86E374BB1F3B59048A2690469005E27D7F9D1F
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Date:
+      - Wed, 18 Dec 2019 02:22:52 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d96a2fbab1dcbec1c47ee6888876b3e171576635771; expires=Fri, 17-Jan-20
+        02:22:51 GMT; path=/; domain=.localbitcoins.com; HttpOnly; SameSite=Lax; Secure
+      - django_language=en; Path=/
+      - lbc_browser_id=HNHAOMIJOPMHRNCVWWGEJCQBSLAVNOZR; expires=Mon, 15-Jun-2020
+        02:22:52 GMT; httponly; Max-Age=15552000; Path=/; secure
+      - localbitcoinssession=yfnm5w3nyrzdtlldnm304ahl35wxncw3; expires=Thu, 19-Dec-2019
+        02:22:52 GMT; httponly; Max-Age=86400; Path=/; secure
+      X-Content-Type-Options:
+      - nosniff
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - DENY
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 546dabe63ddef7e2-EZE
+    body:
+      encoding: UTF-8
+      string: '{"error": {"message": "Invalid parameters.", "errors": {"address":
+        "* Invalid Bitcoin address."}, "error_code": 9, "error_lists": {"address":
+        ["Invalid Bitcoin address."]}}}'
+    http_version: 
+  recorded_at: Wed, 18 Dec 2019 02:22:52 GMT
+recorded_with: VCR 5.0.0

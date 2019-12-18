@@ -130,38 +130,102 @@ RSpec.describe Localbitcoins::Client, :vcr do
 
   describe :wallet do
     describe '#wallet' do
-      it 'is' do
-        pending('waiting to be implemented')
-        expect(1).to be(1)
+      context 'valid response' do
+        let(:response) { valid_client.wallet }
+        let(:body) { JSON.parse(response.body, symbolize_names: true)[:data] }
+
+        it 'should return valid response' do
+          expect(response.status).to eq(200)
+          expect(body.size).to eq(6)
+        end
+
+        it 'should return the receiving address' do
+          expect(body[:receiving_address]).to eq('randomStringTest')
+        end
+
+        it 'should receive total with balance and sendable fields' do
+          expect(body[:total][:balance]).to eq('0.00000000')
+          expect(body[:total][:sendable]).to eq('0')
+        end
       end
     end
+
     describe '#wallet_balance' do
-      it 'is' do
-        pending('waiting to be implemented')
-        expect(1).to be(1)
+      context 'valid response' do
+        let(:response) { valid_client.wallet_balance }
+        let(:body) { JSON.parse(response.body, symbolize_names: true)[:data] }
+
+        it 'should return valid response' do
+          expect(response.status).to eq(200)
+          expect(body.size).to eq(5)
+        end
+
+        it 'should return the receiving address' do
+          expect(body[:receiving_address]).to eq('randomStringTest')
+        end
+
+        it 'should receive a receiving address list' do
+          expect(body[:receiving_address_list][0][:received]).to eq('0.00000000')
+          expect(body[:receiving_address_list][0][:address]).to eq('randomStringTest')
+        end
+
+        it 'should receive total with balance and sendable fields' do
+          expect(body[:total][:balance]).to eq('0.00000000')
+          expect(body[:total][:sendable]).to eq('0')
+        end
       end
     end
+    
     describe '#wallet_address' do
-      it 'is' do
-        pending('waiting to be implemented')
-        expect(1).to be(1)
+      context 'valid response' do
+        let(:response) { valid_client.wallet_address }
+        let(:body) { JSON.parse(response.body, symbolize_names: true)[:data] }
+
+        it 'should return valid response' do
+          expect(response.status).to eq(200)
+          expect(body.size).to eq(2)
+        end
+
+        it 'should return an ok message' do
+          expect(body[:message]).to eq('OK!')
+        end
+
+        it 'should return the account address' do
+          expect(body[:address]).to eq('randomStringTest')
+        end
       end
     end
+
     describe '#fees' do
-      it 'is' do
-        pending('waiting to be implemented')
-        expect(1).to be(1)
+      context 'valid response' do
+        let(:response) { valid_client.fees }
+        let(:body) { JSON.parse(response.body, symbolize_names: true)[:data] }
+
+        it 'should return valid response' do
+          expect(response.status).to eq(200)
+          expect(body.size).to eq(2)
+        end
+
+        it 'should return a deposit fee' do
+          expect(body[:deposit_fee]).to eq('0.00003000')
+        end
+
+        it 'should return a outgoing fee' do
+          expect(body[:outgoing_fee]).to eq('0.00001000')
+        end
       end
     end
+
     describe '#wallet_send' do
-      it 'is' do
-        pending('waiting to be implemented')
+      xit 'should be implemented' do
+        pending('should be implemented')
         expect(1).to be(1)
       end
     end
+
     describe '#wallet_send_pin' do
-      it 'is' do
-        pending('waiting to be implemented')
+      xit 'should be implemented' do
+        pending('should be implemented')
         expect(1).to be(1)
       end
     end

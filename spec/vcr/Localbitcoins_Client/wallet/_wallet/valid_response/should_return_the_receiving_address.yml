@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://localbitcoins.com/api/wallet/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Localbitcoins Ruby Gem 0.1.0
+      Apiauth-Key:
+      - 812d25c29f1a94bc1b8cf2d08f51e5af
+      Apiauth-Nonce:
+      - '1576212900'
+      Apiauth-Signature:
+      - 8C6591830458445F009C5A8C8C5A0C3AA4A9D3D32FA8334393B200F24FC87C9A
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 13 Dec 2019 04:55:08 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d87c0ed79677affeb2a40532acd0a30161576212900; expires=Sun, 12-Jan-20
+        04:55:00 GMT; path=/; domain=.localbitcoins.com; HttpOnly; Secure
+      - django_language=en; Path=/
+      - lbc_browser_id=TYFQSNXTNERYCZRWUJCRDZHFUXZPTWWF; expires=Wed, 10-Jun-2020
+        04:55:08 GMT; httponly; Max-Age=15552000; Path=/; secure
+      - localbitcoinssession=None; expires=Sat, 14-Dec-2019 04:55:08 GMT; httponly;
+        Max-Age=86400; Path=/; secure
+      X-Content-Type-Options:
+      - nosniff
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - DENY
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 544557e19948f7e6-EZE
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data": {"receiving_address": "randomStringTest",
+        "received_transactions_30d": [], "old_address_list": [{"received": "0.00000000",
+        "address": "randomStr..."}], "sent_transactions_30d": [], "message": "OK",
+        "total": {"balance": "0.00000000", "sendable": "0"}}}'
+    http_version: 
+  recorded_at: Fri, 13 Dec 2019 04:55:08 GMT
+recorded_with: VCR 5.0.0
