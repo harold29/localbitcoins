@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://localbitcoins.com/api/wallet-addr/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Localbitcoins Ruby Gem 0.1.0
+      Apiauth-Key:
+      - 812d25c29f1a94bc1b8cf2d08f51e5af
+      Apiauth-Nonce:
+      - '1576633844'
+      Apiauth-Signature:
+      - 06D87A1470D63377DEEE05DF8AE126509CD327736FEB73194CB9E8A5E5672091
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 18 Dec 2019 01:50:44 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=da6d46c7937f1a539079c99ef1a3f04381576633844; expires=Fri, 17-Jan-20
+        01:50:44 GMT; path=/; domain=.localbitcoins.com; HttpOnly; SameSite=Lax; Secure
+      - django_language=en; Path=/
+      - lbc_browser_id=VGUSVYEMBWCKIBGNMIQYZWEPJLPWHAQF; expires=Mon, 15-Jun-2020
+        01:50:44 GMT; httponly; Max-Age=15552000; Path=/; secure
+      - localbitcoinssession=e9iv0yy514uvq6t193edlev99msslf5d; expires=Thu, 19-Dec-2019
+        01:50:44 GMT; httponly; Max-Age=86400; Path=/; secure
+      X-Content-Type-Options:
+      - nosniff
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - DENY
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 546d7cd50b42f7a2-EZE
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data": {"message": "OK!", "address": "randomStringTest"}}'
+    http_version: 
+  recorded_at: Wed, 18 Dec 2019 01:50:44 GMT
+recorded_with: VCR 5.0.0
